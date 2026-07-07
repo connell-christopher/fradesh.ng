@@ -213,25 +213,15 @@ rgba(90,0,0,.60)
 );
 
 }
-
 .hero-container{
 
-    position: relative;
-    z-index: 2;
+    width:100%;
+    padding:100px 20px 40px;
 
-    width: 100%;
-    max-width: 1400px;
+    display:flex;
+    flex-direction:column;
 
-    margin: 0 auto;
-
-    padding: 110px 8% 40px;
-
-    display: grid;
-    grid-template-columns: 1.2fr .8fr;
-
-    align-items: center;
-
-    gap: 70px;
+    gap:30px;
 
 }
 
@@ -269,11 +259,10 @@ backdrop-filter:blur(15px);
 
 
 .hero-left h1{
+font-size:2.2rem;
 
-font-size:5.5rem;
-
-line-height:1.05;
-
+line-height:1.2;
+    
 font-weight:900;
 
 color:white;
@@ -1320,7 +1309,9 @@ display:block;
 .input-group{
 
     display:grid;
-    grid-template-columns:1fr 1fr;
+
+    grid-template-columns:1fr;
+
     gap:20px;
 
 }
@@ -1843,11 +1834,18 @@ justify-content:center;
         MOBILE
 ======================================*/
 
-@media (max-width:768px){
+@media (max-width:480px){
 
 .hero{
 
     min-height:100svh;
+
+}
+
+.input-group{
+
+display:grid;
+grid-template-columns:1fr;
 
 }
 
@@ -1867,15 +1865,29 @@ justify-content:center;
 
 }
 
+.hero{
+
+min-height:100svh;
+height:auto;
+
+}
+
+
 .hero-left p{
 
-    font-size:1rem;
+font-size:.95rem;
 
 }
 
 .hero-buttons{
 
     justify-content:center;
+
+}
+
+.product-gallery{
+
+height:300px;
 
 }
 
@@ -2267,5 +2279,41 @@ PRODUCT-IMAGE-GALLERY
 }
 
 
+
+}
+
+
+/*===========================
+  MOBILE-SAFETY
+===========================*/
+@media(max-width:768px){
+
+*{
+    max-width:100%;
+}
+
+body{
+    overflow-x:hidden;
+}
+
+
+.hero,
+.products,
+.about,
+.booking,
+.stats,
+.footer{
+
+    width:100%;
+
+}
+
+
+img{
+
+    max-width:100%;
+    height:auto;
+
+}
 
 }
