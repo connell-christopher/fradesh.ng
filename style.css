@@ -1,3 +1,13 @@
+html,
+body{
+    width:100%;
+    overflow-x:hidden;
+    max-width:100%;
+}
+
+/*==============================
+ROOT
+===============================*/
 *,
 *::before,
 *::after{
@@ -35,12 +45,11 @@ NAVIGATION
 position:fixed;
 
 top:0;
-
 left:0;
 
 width:100%;
 
-padding:22px 7%;
+padding:10px 6%;
 
 display:flex;
 
@@ -48,44 +57,55 @@ justify-content:space-between;
 
 align-items:center;
 
-background:rgba(139,0,0,.92);
+background:rgba(139,0,0,.88);
 
-backdrop-filter:blur(18px);
+backdrop-filter:blur(15px);
 
-border-bottom:1px solid rgba(212,175,55,.3);
+border-bottom:1px solid rgba(212,175,55,.25);
 
 z-index:9999;
 
+height:70px;
 
 }
 
+
 .logo{
 
-font-size:2rem;
+font-size:1.7rem;
 
 font-weight:900;
 
-letter-spacing:2px;
+letter-spacing:1.5px;
 
 color:white;
 
 }
 
-.logo span{
 
-color:var(--gold);
+.logo img{
+
+width:120px;
+
+height:auto;
+
+display:block;
 
 }
+
 
 .nav-links{
 
 display:flex;
 
-gap:40px;
+gap:30px;
 
 list-style:none;
 
+align-items:center;
+
 }
+
 
 .nav-links a{
 
@@ -95,9 +115,12 @@ text-decoration:none;
 
 font-weight:600;
 
-transition:.35s;
+font-size:.95rem;
+
+transition:.3s;
 
 }
+
 
 .nav-links a:hover{
 
@@ -105,39 +128,38 @@ color:var(--gold);
 
 }
 
+
 .nav-btn{
 
-padding:15px 32px;
+padding:10px 24px;
 
 background:linear-gradient(
-
 135deg,
-
 var(--gold2),
-
 var(--gold)
-
 );
 
 border-radius:50px;
 
 font-weight:700;
 
+font-size:.9rem;
+
 color:var(--red);
 
 text-decoration:none;
 
 box-shadow:
+0 10px 25px rgba(212,175,55,.25);
 
-0 15px 35px rgba(212,175,55,.35);
-
-transition:.35s;
+transition:.3s;
 
 }
 
+
 .nav-btn:hover{
 
-transform:translateY(-4px);
+transform:translateY(-3px);
 
 }
 
@@ -213,15 +235,25 @@ rgba(90,0,0,.60)
 );
 
 }
+
 .hero-container{
 
-    width:100%;
-    padding:100px 20px 40px;
+    position: relative;
+    z-index: 2;
 
-    display:flex;
-    flex-direction:column;
+    width: 100%;
+    max-width: 1400px;
 
-    gap:30px;
+    margin: 0 auto;
+
+    padding: 110px 8% 40px;
+
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+
+    align-items: center;
+
+    gap: 70px;
 
 }
 
@@ -259,10 +291,11 @@ backdrop-filter:blur(15px);
 
 
 .hero-left h1{
-font-size:2.2rem;
 
-line-height:1.2;
-    
+font-size:5.5rem;
+
+line-height:1.05;
+
 font-weight:900;
 
 color:white;
@@ -1267,6 +1300,16 @@ display:block;
 =============================== */
 
 .booking-form{
+      width:100%;
+    }
+
+    .booking-form input,
+    .booking-form select,
+    .booking-form textarea{
+    width:100%;
+}
+
+
     background:#fff;
     padding:55px;
     border-radius:30px;
@@ -1309,9 +1352,7 @@ display:block;
 .input-group{
 
     display:grid;
-
-    grid-template-columns:1fr;
-
+    grid-template-columns:1fr 1fr;
     gap:20px;
 
 }
@@ -1834,18 +1875,11 @@ justify-content:center;
         MOBILE
 ======================================*/
 
-@media (max-width:480px){
+@media (max-width:768px){
 
 .hero{
 
     min-height:100svh;
-
-}
-
-.input-group{
-
-display:grid;
-grid-template-columns:1fr;
 
 }
 
@@ -1865,29 +1899,15 @@ grid-template-columns:1fr;
 
 }
 
-.hero{
-
-min-height:100svh;
-height:auto;
-
-}
-
-
 .hero-left p{
 
-font-size:.95rem;
+    font-size:1rem;
 
 }
 
 .hero-buttons{
 
     justify-content:center;
-
-}
-
-.product-gallery{
-
-height:300px;
 
 }
 
@@ -2278,33 +2298,15 @@ PRODUCT-IMAGE-GALLERY
 
 }
 
-
-
-}
-
-
-/*===========================
-  MOBILE-SAFETY
-===========================*/
-@media(max-width:768px){
-
-*{
-    max-width:100%;
-}
-
+/*=============
+    NEW 
+=============*/
+html,
 body{
+
+    max-width:100%;
+
     overflow-x:hidden;
-}
-
-
-.hero,
-.products,
-.about,
-.booking,
-.stats,
-.footer{
-
-    width:100%;
 
 }
 
@@ -2312,8 +2314,505 @@ body{
 img{
 
     max-width:100%;
+
     height:auto;
 
 }
+
+
+}
+
+
+
+/*====================================================
+    FINAL MOBILE OVERRIDE
+    THIS OVERRIDES ALL OLD MOBILE CSS
+====================================================*/
+/*====================================================
+        CLEAN MOBILE RESPONSIVE SYSTEM
+        REPLACES ALL OLD MOBILE CSS
+====================================================*/
+
+
+@media (max-width: 992px){
+
+
+/* NAVBAR */
+
+.navbar{
+
+    height:70px;
+
+    padding:10px 5%;
+
+}
+
+
+.logo img{
+
+    width:100px;
+
+}
+
+
+/* HERO */
+
+.hero{
+    
+    min-height:100svh;
+    
+    overflow:hidden;
+}
+
+
+.hero-container{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    text-align:center;
+
+    gap:35px;
+
+    padding:100px 25px 40px;
+
+}
+
+
+.hero-left{
+
+    align-items:center;
+
+}
+
+
+.hero-left h1{
+
+    font-size:3rem;
+
+    line-height:1.15;
+
+}
+
+
+.hero-left p{
+
+    font-size:1rem;
+
+    line-height:1.7;
+
+    max-width:500px;
+
+}
+
+
+.hero-buttons{
+
+    justify-content:center;
+
+}
+
+
+.premium-card{
+
+    width:100%;
+
+    max-width:450px;
+
+}
+
+
+
+/* PRODUCTS */
+
+
+.product-row,
+.product-row.reverse{
+
+    flex-direction:column;
+
+    gap:40px;
+
+    margin-bottom:80px;
+
+}
+
+
+.product-text{
+
+    text-align:center;
+
+}
+
+
+.product-number{
+
+    font-size:3.5rem;
+
+}
+
+
+.product-text h3{
+
+    font-size:2rem;
+
+}
+
+
+.product-text p{
+
+    font-size:1rem;
+
+}
+
+
+.product-text ul{
+
+    grid-template-columns:1fr;
+
+    padding:0;
+
+}
+
+
+.product-image img{
+
+    border-radius:20px;
+
+}
+
+
+
+
+/* ABOUT */
+
+
+.about{
+
+    padding:90px 5%;
+
+}
+
+
+.about-container{
+
+    grid-template-columns:1fr;
+
+    gap:40px;
+
+}
+
+
+.about-content{
+
+    text-align:center;
+
+}
+
+
+.about-content h2{
+
+    font-size:2.5rem;
+
+}
+
+
+.about-content p{
+
+    font-size:1rem;
+
+}
+
+
+.experience-box{
+
+    position:relative;
+
+    right:auto;
+
+    bottom:auto;
+
+    margin:-30px auto 0;
+
+}
+
+
+
+
+/* BOOKING */
+
+
+.booking{
+
+    padding:90px 5%;
+
+}
+
+
+.booking-container{
+
+    grid-template-columns:1fr;
+
+    gap:40px;
+
+}
+
+
+.booking-form{
+
+    padding:30px 20px;
+
+}
+
+
+.input-group{
+
+    grid-template-columns:1fr;
+
+}
+
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea{
+
+    height:55px;
+
+    font-size:15px;
+
+}
+
+
+.booking-form textarea{
+
+    height:150px;
+
+}
+
+
+
+
+
+/* FOOTER */
+
+
+.footer-top{
+
+    grid-template-columns:1fr;
+
+    padding:0 5% 50px;
+
+    text-align:center;
+
+}
+
+
+.footer-column h3::after{
+
+    margin:10px auto;
+
+}
+
+
+.footer-contact div{
+
+    justify-content:center;
+
+}
+
+
+.footer-bottom{
+
+    flex-direction:column;
+
+    text-align:center;
+
+    gap:15px;
+
+}
+
+
+
+/* GALLERY */
+
+
+.product-gallery{
+
+    height:300px;
+
+}
+
+
+}
+
+
+
+
+/*====================================================
+        SMALL PHONES
+====================================================*/
+
+
+@media(max-width:480px){
+
+
+
+.navbar{
+
+    padding:10px 20px;
+
+}
+
+
+
+.logo{
+
+    font-size:1.3rem;
+
+}
+
+
+
+.hero-container{
+
+    padding:90px 20px 30px;
+
+}
+
+
+
+.hero-left h1{
+
+    font-size:2.1rem;
+
+}
+
+
+
+.hero-left p{
+
+    font-size:.95rem;
+
+}
+
+
+
+.hero-tag{
+
+    padding:10px 18px;
+
+    font-size:.75rem;
+
+}
+
+
+
+.btn-primary,
+.btn-secondary{
+
+    width:100%;
+
+    padding:15px;
+
+}
+
+
+
+.hero-buttons{
+
+    width:100%;
+
+}
+
+
+
+.premium-card{
+
+    padding:20px;
+
+}
+
+
+
+.premium-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.section-title{
+
+    font-size:2.2rem;
+
+}
+
+
+
+.section-heading h2{
+
+    font-size:2.2rem;
+
+}
+
+
+
+.products{
+
+    padding:80px 5%;
+
+}
+
+
+
+.product-text h3{
+
+    font-size:1.8rem;
+
+}
+
+
+
+.about-content h2{
+
+    font-size:2.1rem;
+
+}
+
+
+
+.feature{
+
+    flex-direction:column;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+
+
+.booking-form button{
+
+    height:55px;
+
+}
+
+
+
+.social-icons a{
+
+    width:50px;
+
+    height:50px;
+
+}
+
+
 
 }
