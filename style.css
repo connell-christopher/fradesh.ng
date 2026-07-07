@@ -2879,3 +2879,18 @@ img{
 
 
 }
+
+
+
+/* CONTACT */
+.footer-contact p{
+
+    margin:0;
+
+    line-height:1.6;
+
+    overflow-wrap:normal;
+
+    word-break:normal;
+
+}
